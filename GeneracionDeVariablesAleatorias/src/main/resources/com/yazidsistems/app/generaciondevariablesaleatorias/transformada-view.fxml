@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="15.0" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com" xmlns:fx="http://javafx.com" fx:controller="com.yazidsistems.app.generaciondevariablesaleatorias.controller.TransformadaController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Método de la Transformada Inversa">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label text="Distribución Exponencial" textFill="#666666" />
+
+        <HBox alignment="CENTER" spacing="10.0">
+            <children>
+                <Label text="Valor de Lambda (λ):" />
+                <TextField fx:id="lambdaInput" prefWidth="80.0" text="1.5" />
+                <Button text="Generar 10 Variables" onAction="#generarVariables" />
+            </children>
+        </HBox>
+
+        <ListView fx:id="listView" prefHeight="150.0" prefWidth="200.0" />
+
+        <Button text="Volver al Menú" onAction="#volverMenu" />
+    </children>
+</VBox>
